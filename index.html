@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>WebAR_Nidasyuzo_shere</title>
+
+  <!-- model-viewer用のheadタグ -->
+  <!-- Loads <model-viewer> for modern browsers: -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
+  <!-- Loads <model-viewer> for old browsers like IE11: -->
+  <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+  
+  <style>
+  .wrapper {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  img {
+    max-width: 100%;
+  }
+  .ar-model {
+    margin: 0 auto;
+    max-width: 600px;
+    height: 400px;
+  }
+  </style>
+  
+</head>
+<body>
+<div class="wrapper">
+  
+  <h1 style="text-align:center">仁井田酒造フォトグラメトリAR</h1>
+  <br>
+  <h2 style="text-align:center"></h2>
+  
+ 
+  <!-- 以下model-viewer挿入 -->
+    <p><h3 style="text-align:center">入り口</h3>
+    <model-viewer class="ar-model" preload poster="nida.png" src="syuzo.glb" ios-src="syuzo.usdz" auto-rotate camera-controls ar alt="サンプル"></model-viewer>
+
+  
+    <p><h3 style="text-align:center">FPZ</h3>
+  <!-- 以下model-viewer挿入 -->
+    <model-viewer class="ar-model" preload poster="スクリーンショットFPZ.png" src="FPZ.glb" ios-src="FPZ.usdz" auto-rotate camera-controls ar alt="サンプル"></model-viewer>
+  </p>   
+  
+</div>
+</body>
+</html>
